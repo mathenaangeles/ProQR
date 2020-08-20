@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@800&family=Roboto:wght@400;500&display=swap" rel="stylesheet');
+$blue: #557a95;
+$grey: #5d5c61;
+$light-blue: #7395ae;
+$light-grey: #938d94;
+$creme: #b1a296;
+$primary: $blue;
+$secondary: $light-grey;
+$info: $creme;
+$light: $light-blue;
+$dark: $grey;
+@mixin flexCenter($direction) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: center;
+  align-items: center;
+}
+body {
+  font-family: "Roboto", sans-serif !important;
+}
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+@import "../../../node_modules/bootstrap-vue/src/index.scss";
