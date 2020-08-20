@@ -1,7 +1,7 @@
 <template>
   <b-container fluid id="register" class="d-flex justify-content-center">
     <b-card no-body class="my-5">
-      <b-card-body title="Registration Form">
+      <b-card-body title="Register">
         <b-form-group label="User Type">
           <b-form-select v-model="type" :options="options"></b-form-select>
         </b-form-group>

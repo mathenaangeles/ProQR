@@ -40,7 +40,6 @@
 <script>
 export default {
   name: "Navbar",
-  data() {},
   methods: {
     authenticate() {
       this.$store.dispatch("authenticate");
