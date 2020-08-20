@@ -38,7 +38,14 @@
             ></b-form-input>
           </b-input-group>
         </b-form-group>
-        <b-form-group label="Website (Optional)">
+        <b-form-group label="Address">
+          <b-form-input
+            v-model="address"
+            type="text"
+            placeholder="Enter your address"
+          ></b-form-input>
+        </b-form-group>
+        <b-form-group label="Website">
           <b-form-input
             v-model="website"
             type="text"
@@ -85,6 +92,7 @@ export default {
       name: "",
       contact_person: "",
       email: "",
+      address: "",
       password: "",
       website: "",
       mobile: null,
@@ -100,6 +108,7 @@ export default {
     authenticate() {
       this.$store.dispatch("authenticate");
     },
+    profile() {},
   },
 };
 </script>
