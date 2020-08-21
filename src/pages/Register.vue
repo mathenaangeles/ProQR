@@ -6,12 +6,7 @@
           <b-form-select v-model="type" :options="options"></b-form-select>
         </b-form-group>
         <b-form-group label="Company Name">
-          <b-form-input
-            v-model="name"
-            type="text"
-            required
-            placeholder="Enter your company name"
-          ></b-form-input>
+          <b-form-input v-model="name" type="text" required placeholder="Enter your company name"></b-form-input>
         </b-form-group>
         <b-form-group label="Contact Person Name">
           <b-form-input
@@ -22,35 +17,18 @@
           ></b-form-input>
         </b-form-group>
         <b-form-group label="Email">
-          <b-form-input
-            v-model="email"
-            type="email"
-            required
-            placeholder="Enter your email"
-          ></b-form-input>
+          <b-form-input v-model="email" type="email" required placeholder="Enter your email"></b-form-input>
         </b-form-group>
         <b-form-group label="Mobile Number">
           <b-input-group prepend="+63">
-            <b-form-input
-              v-model="mobile"
-              required
-              placeholder="000000000"
-            ></b-form-input>
+            <b-form-input v-model="mobile" required placeholder="000000000"></b-form-input>
           </b-input-group>
         </b-form-group>
         <b-form-group label="Address">
-          <b-form-input
-            v-model="address"
-            type="text"
-            placeholder="Enter your address"
-          ></b-form-input>
+          <b-form-input v-model="address" type="text" placeholder="Enter your address"></b-form-input>
         </b-form-group>
         <b-form-group label="Website">
-          <b-form-input
-            v-model="website"
-            type="text"
-            placeholder="Enter your website"
-          ></b-form-input>
+          <b-form-input v-model="website" type="text" placeholder="Enter your website"></b-form-input>
         </b-form-group>
         <b-form-group label="Password">
           <b-form-input
@@ -60,10 +38,11 @@
             placeholder="At least 8 characters"
           ></b-form-input>
         </b-form-group>
-        <b-form-checkbox v-model="check" value="true" unchecked-value="false"
-          >I agree to the <a href="#">Terms of Service</a> and
-          <a href="#">Privacy Policy</a>.</b-form-checkbox
-        >
+        <b-form-checkbox v-model="check" value="true" unchecked-value="false">
+          I agree to the
+          <a href="#">Terms of Service</a> and
+          <a href="#">Privacy Policy</a>.
+        </b-form-checkbox>
         <b-button
           block
           class="mt-3"
@@ -72,11 +51,11 @@
             authenticate();
             $router.push('/');
           "
-          >Sign Up</b-button
-        >
+        >Sign Up</b-button>
         <hr />
         <p class="mt-2">
-          Already have an account? <a href="/login">Sign In</a>
+          Already have an account?
+          <a href="/login">Sign In</a>
         </p>
       </b-card-body>
     </b-card>

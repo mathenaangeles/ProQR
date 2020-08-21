@@ -1,7 +1,7 @@
 export const Supplies = [
   {
     id: 1,
-    title: "Personal Protective Equipment - Gloves",
+    title: "PPE - Gloves",
     description: "Sterile Gloves Size 6.5 (Box Of 50s)",
     category: "Medical Supplies and Laboratory Instrument",
     price: 950,
@@ -12,7 +12,7 @@ export const Supplies = [
   },
   {
     id: 2,
-    title: "Personal Protective Equipment - Masks",
+    title: "PPE - Masks",
     description: "3 Ply Medical Grade, High Quality Surgical Mask",
     category: "Medical Supplies and Laboratory Instrument",
     price: 1000,
@@ -23,7 +23,7 @@ export const Supplies = [
   },
   {
     id: 3,
-    title: "Medical Consumables - Alcohol",
+    title: "Rubbing Alcohol",
     description: "1 Gallon, 70% Ethyl Alcohol, with FDA Certification",
     category: "Medical and Dental Equipment",
     price: 630,
@@ -35,7 +35,7 @@ export const Supplies = [
   {
     id: 4,
     title: "Testing Kits",
-    description: "Wondfo Cov 2 Antibody Test Kits",
+    description: "Wondfo Cov-2 Antibody Test Kits",
     category: "Drugs and Medicines",
     price: 1700,
     quantity: 1000,
@@ -44,10 +44,10 @@ export const Supplies = [
     supplier_id: 3,
   },
   {
-    id: 4,
+    id: 5,
     title: "Spanish Onion Seeds",
-    description: "Plump Bulbs with a Mild Taste and Papery Brown Skin",
-    category: "	Agricultural Products (Seeds, Seedlings, Plants..)",
+    description: "These grow into plump bulbs with a mild taste.",
+    category: "Agricultural Products (Seeds, Seedlings, Plants..)",
     price: 128,
     quantity: 300,
     unit: "Pound",
@@ -55,10 +55,10 @@ export const Supplies = [
     supplier_id: 4,
   },
   {
-    id: 5,
+    id: 6,
     title: "Agati Seeds",
-    description: "Female (Agathis) Seed Cones",
-    category: "	Agricultural Products (Seeds, Seedlings, Plants..)",
+    description: "We have female cones in stock.",
+    category: "Agricultural Products (Seeds, Seedlings, Plants..)",
     price: 200,
     quantity: 2000,
     unit: "Kilogram",
@@ -66,10 +66,9 @@ export const Supplies = [
     supplier_id: 4,
   },
   {
-    id: 6,
+    id: 7,
     title: "Shop Casting Resin",
-    description:
-      "TAP Quick-Cast (Polyurethane Casting Resin) - Maximum service temperature is 180ºF",
+    description: "TAP Quick-Cast (Polyurethane Casting Resin)",
     category: "Chemicals and Chemical Products",
     price: 500,
     quantity: 10,
@@ -78,10 +77,9 @@ export const Supplies = [
     supplier_id: 5,
   },
   {
-    id: 7,
+    id: 8,
     title: "Colored Acrylic Rods",
-    description:
-      "These vibrant-colored rods are available in 1/4” and 1/2” diameters.",
+    description: "These rods are available in 1/4” and 1/2” diameters.",
     category: "Chemicals and Chemical Products",
     price: 50,
     quantity: 300,

@@ -7,47 +7,52 @@
       <b-col class="p-0" cols="3">
         <b-input-group>
           <b-input-group-prepend>
-            <span class="input-group-text"
-              ><b-icon icon="person-check-fill"></b-icon
-            ></span>
+            <span class="input-group-text">
+              <b-icon icon="person-check-fill"></b-icon>
+            </span>
           </b-input-group-prepend>
-          <b-form-input placeholder="Search Keyword"></b-form-input>
+          <b-form-input v-model="k" placeholder="Search Keyword"></b-form-input>
         </b-input-group>
       </b-col>
       <b-col class="p-0" cols="3">
         <b-input-group>
           <b-input-group-prepend>
-            <span class="input-group-text"
-              ><b-icon icon="geo-alt"></b-icon
-            ></span>
+            <span class="input-group-text">
+              <b-icon icon="geo-alt"></b-icon>
+            </span>
           </b-input-group-prepend>
-          <b-form-input placeholder="Location"></b-form-input>
+          <b-form-input v-model="l" placeholder="Location"></b-form-input>
         </b-input-group>
       </b-col>
       <b-col class="p-0" cols="3">
         <b-input-group>
           <b-input-group-prepend>
-            <span class="input-group-text"
-              ><b-icon icon="house-fill"></b-icon
-            ></span>
+            <span class="input-group-text">
+              <b-icon icon="house-fill"></b-icon>
+            </span>
           </b-input-group-prepend>
-          <b-form-select v-model="category" :options="options"></b-form-select>
+          <b-form-select v-model="c" :options="options"></b-form-select>
         </b-input-group>
       </b-col>
-      <b-col class="p-0" cols="2"
-        ><b-button class="btn-block" variant="primary">Search</b-button></b-col
-      >
+      <b-col class="p-0" cols="2">
+        <b-button class="btn-block" variant="primary" @click="emitSearch()">Search</b-button>
+      </b-col>
     </b-row>
   </b-container>
 </template>
 
 <script>
 export default {
+  props: {
+    keyword: String,
+    location: String,
+    category: String,
+  },
   data() {
     return {
-      supply: "",
-      location: "",
-      category: null,
+      k: this.keyword,
+      l: this.location,
+      c: this.category,
       options: [
         { value: null, text: "Select a category" },
         {
@@ -681,6 +686,12 @@ export default {
       )[0];
       return supplier;
     },
+    emitSearch() {
+      this.$emit("emitSearch", this.k, this.l, this.c);
+    },
+  },
+  created() {
+    this.c = null;
   },
 };
 </script>

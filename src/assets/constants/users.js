@@ -9,13 +9,14 @@ export const Users = [
     website: "http://medicalsuppliesdepot.com.ph/about-us/",
     address:
       "Unit 2107 Medical Plaza Ortigas One San Miguel Ave. Brgy. San Antonio, Pasig City 1602",
-    network: ["Medical Center Trading Corporation"],
+    network: ["Medical Center Corporation"],
     image_url: "user.png",
+    rating: 4,
   },
   {
     id: 2,
     type: "supplier",
-    name: "Medical Center Trading Corporation",
+    name: "Medical Center Corporation",
     contact_person: "Juan Dela Cruz",
     email: "op.mctc@medicalcentertrading.com",
     mobile: "+63917 654 3290",
@@ -23,6 +24,7 @@ export const Users = [
     address: "Pioneer Street Corner, Shaw Boulevard, Pasig City",
     network: ["Medical Supplier Depot", "Fompac Plastics Corporation"],
     image_url: "user.png",
+    rating: 3.5,
   },
   {
     id: 3,
@@ -33,8 +35,9 @@ export const Users = [
     mobile: "+63915 253 2583",
     website: "https://philmedicalsupplies.com/",
     address: "G. Araneta Ave, Bagong Barrio West, Caloocan, Metro Manila",
-    network: ["Medical Supplier Depot", "Medical Center Trading Corporation"],
+    network: ["Medical Supplier Depot", "Medical Center Corporation"],
     image_url: "user.png",
+    rating: 2,
   },
   {
     id: 4,
@@ -48,19 +51,7 @@ export const Users = [
       "Nebraska cor. Ohio Street Southville Town and Country, Binan City, Laguna",
     network: [""],
     image_url: "user.png",
-  },
-  {
-    id: 4,
-    type: "supplier",
-    name: "Vigorseed Incorporated",
-    contact_person: "Charles Lee",
-    email: "vigorseed_inc@gmail.com",
-    mobile: "+63946 031 7711",
-    website: "http://vigorseed.com.ph/",
-    address:
-      "Nebraska cor. Ohio Street Southville Town and Country, Binan City, Laguna",
-    network: [""],
-    image_url: "user.png",
+    rating: 2.5,
   },
   {
     id: 5,
@@ -74,6 +65,7 @@ export const Users = [
       "1140 A. Lorenzo Jr. St. former Batangas St, Tondo, Manila, 1012 Metro Manila",
     network: [""],
     image_url: "user.png",
+    rating: 5,
   },
   {
     id: 6,
@@ -86,10 +78,11 @@ export const Users = [
     address: "Carmen, Cotobato, 9408 Soccsksargen",
     network: [
       "Medical Supplier Depot",
-      "Medical Center Trading Corporation",
+      "Medical Center Corporation",
       "Vigorseed Incorporated",
     ],
     image_url: "user.png",
+    rating: null,
   },
   {
     id: 7,
@@ -102,9 +95,10 @@ export const Users = [
     address: "Tagum, 8100 Davao del Norte",
     network: [
       "Medical Supplier Depot",
-      "Medical Center Trading Corporation",
+      "Medical Center Corporation",
       "Philippine Medical Supplies",
     ],
     image_url: "user.png",
+    rating: null,
   },
 ];
