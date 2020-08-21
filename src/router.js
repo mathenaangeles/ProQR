@@ -6,6 +6,7 @@ import Login from "./pages/Login.vue";
 import Listings from "./pages/Listings.vue";
 import Listing from "./components/Listing.vue";
 import Supplier from "./pages/Supplier.vue";
+import Confirmation from "./pages/Confirmation.vue";
 
 Vue.use(Router);
 
@@ -41,6 +42,11 @@ export default new Router({
       path: "/supplier/:id",
       name: "supplier",
       component: Supplier,
+    },
+    {
+      path: "/confirmation/:id",
+      name: "confirmation",
+      component: Confirmation,
     },
   ],
 });
