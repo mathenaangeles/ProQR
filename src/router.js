@@ -4,7 +4,7 @@ import Home from "./pages/Home.vue";
 import Register from "./pages/Register.vue";
 import Login from "./pages/Login.vue";
 import Listings from "./pages/Listings.vue";
-import Listing from "./components/Listing.vue";
+import ListingPage from "./pages/ListingPage.vue";
 import Supplier from "./pages/Supplier.vue";
 
 Vue.use(Router);
@@ -35,7 +35,8 @@ export default new Router({
     {
       path: "/listing/:id",
       name: "listing",
-      component: Listing,
+      component: ListingPage,
+      props: true,
     },
     {
       path: "/supplier/:id",

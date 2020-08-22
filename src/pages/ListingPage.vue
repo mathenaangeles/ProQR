@@ -9,34 +9,47 @@
           <b-row>
             <b-col>
               <b
-                class="title listing-title"
-                @click="gotoPath('listing',listing.id)"
+                class="title"
               >{{ listing.title }} </b>
             </b-col>
-          </b-row>
-          <b-row>
             <b-col class="pb-0 pt-1 price">
-              <b>PHP {{ formatPrice(listing.budget) }}</b> <br>
+              <b-button :variant='interested? "success":"outline-success"'
+              @click="interested = !interested">
+                PHP {{ formatPrice(listing.budget) }} |<b> Interested </b> &nbsp;
+                <b-icon icon="star-fill" variant="warning" v-show="interested" ></b-icon>
+                <b-icon icon="star" variant="warning" v-show="!interested"></b-icon>
+              </b-button>
+
               <!-- <b-icon class="mr-2" icon="calendar-fill"></b-icon>
             {{listing.start_date}} - {{listing.end_date}} -->
             </b-col>
           </b-row>
           <b-row class="supplier">
             <b-col>
-              <b-link @click="gotoPath('agency',agency.id)">{{ agency.name }}</b-link>
+              <b-link @click="gotoSupplier('agency',agency.id)">{{ agency.name }}</b-link>
             </b-col>
           </b-row>
-        </b-card-body>
-        <b-list-group flush>
+
+          <hr>
+          <!-- <b-row> -->
+
+          <b-list-group flush>
           <b-list-group-item class="pb-2">
-            <b-icon class="mr-2" icon="geo-alt"></b-icon>
+            Start Date: {{ listing.start_date }}
+          </b-list-group-item>
+          <b-list-group-item class="pb-2">
+            End Date: {{listing.end_date}}
+          </b-list-group-item>
+          <b-list-group-item class="pb-2">
+            <b-icon icon="geo-alt"></b-icon>
             {{ listing.location }}
           </b-list-group-item>
-          <b-list-group-item class="pb-0">
-            <b-icon class="mr-2" icon="calendar-fill"></b-icon>
-            {{listing.start_date}} - {{listing.end_date}}
-          </b-list-group-item>
+           <b-list-group-item>
+              <b-card-text class="p-3 description">{{listing.description}}</b-card-text>
+           </b-list-group-item>
+           
         </b-list-group>
+        </b-card-body>
       </b-col>
     </b-row>
   </b-card>
@@ -44,21 +57,22 @@
 
 <script>
 const Listing = {
-  name: "Listing",
-  props: {
-    listing: Object,
-    agency: Object,
-  },
+  name: "ListingPage",
+  props: ['id'],
   data() {
     return {
       rating: 0,
+      listing: null,
+      agency: null,
+      interested: false,
     };
   },
   created() {
-    // this.rating = this.supplier.rating;
+    this.listing = this.$store.state.listings.filter(listing => listing.id == this.id)[0];
+    this.agency = this.$store.state.users.filter(user => user.id == this.listing.agency)[0];
   },
   methods: {
-    gotoPath(path, id) {
+    gotoAgency(path, id) {
       this.$router.push("/" + path + "/" + id);
     },
     formatPrice(number) {
@@ -71,14 +85,15 @@ export default Listing;
 
 <style scoped>
 .card {
-  width: 600px;
-  max-height: 200px;
+  /* width: 600px;
+  max-height: 200px; */
+  background-color: #b1a296,
 }
 .title {
   font-family: "Raleway", sans-serif !important;
 }
 .price {
-  text-align: left !important;
+  text-align: right !important;
 
 }
 .supplier {
