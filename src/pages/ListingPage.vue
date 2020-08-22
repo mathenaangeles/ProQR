@@ -19,7 +19,7 @@
                 <b-icon icon="star-fill" variant="warning" v-show="interested" ></b-icon>
                 <b-icon icon="star" variant="warning" v-show="!interested"></b-icon>
               </b-button>
-
+            
               <!-- <b-icon class="mr-2" icon="calendar-fill"></b-icon>
             {{listing.start_date}} - {{listing.end_date}} -->
             </b-col>
@@ -27,6 +27,9 @@
           <b-row class="supplier">
             <b-col>
               <b-link @click="gotoSupplier('agency',agency.id)">{{ agency.name }}</b-link>
+            </b-col>
+            <b-col class="supplier pt-2 pr-4 price">
+                No. of Interested Suppliers: {{interested ? listing.interested_suppliers + 1 : listing.interested_suppliers}}
             </b-col>
           </b-row>
 
