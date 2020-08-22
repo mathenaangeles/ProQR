@@ -8,6 +8,7 @@ import ListingPage from "./pages/ListingPage.vue";
 import Agency from "./pages/Agency.vue";
 import Supplier from "./pages/Supplier.vue";
 import Confirmation from "./pages/Confirmation.vue";
+import AddListing from './pages/AddListing.vue';
 
 Vue.use(Router);
 
@@ -28,6 +29,11 @@ export default new Router({
       path: "/login",
       name: "login",
       component: Login,
+    },
+    {
+      path: "/newlisting",
+      name: "AddListing",
+      component: AddListing,
     },
     {
       path: "/listings",
