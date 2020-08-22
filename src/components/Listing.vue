@@ -11,14 +11,15 @@
               <b
                 class="title listing-title"
                 @click="gotoPath('listing',listing.id)"
-              >{{ listing.title }} </b>
+              >{{ listing.title }}</b>
             </b-col>
           </b-row>
           <b-row>
             <b-col class="pb-0 pt-1 price">
-              <b>PHP {{ formatPrice(listing.budget) }}</b> <br>
+              <b>PHP {{ formatPrice(listing.budget) }}</b>
+              <br />
               <!-- <b-icon class="mr-2" icon="calendar-fill"></b-icon>
-            {{listing.start_date}} - {{listing.end_date}} -->
+              {{listing.start_date}} - {{listing.end_date}}-->
             </b-col>
           </b-row>
           <b-row class="supplier">
@@ -33,7 +34,7 @@
             {{ listing.location }}
           </b-list-group-item>
           <b-list-group-item class="pb-0">
-            <b-icon class="mr-2" icon="bookshelf"></b-icon>
+            <b-icon class="mr-2" icon="house-fill"></b-icon>
             {{listing.category}}
           </b-list-group-item>
         </b-list-group>
@@ -79,7 +80,7 @@ export default Listing;
 }
 .price {
   text-align: left !important;
-
+  color: #5d5c61;
 }
 .supplier {
   align-items: center !important;
