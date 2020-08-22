@@ -37,6 +37,9 @@
           <!-- <b-row> -->
 
           <b-list-group flush>
+            <b-list-group-item class="pb-2">
+              Type: {{ listing.category }}
+            </b-list-group-item>
           <b-list-group-item class="pb-2">
             Start Date: {{ listing.start_date }}
           </b-list-group-item>
