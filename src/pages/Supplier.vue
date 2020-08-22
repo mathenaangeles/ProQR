@@ -65,6 +65,46 @@
                 <th>Start Date</th>
                 <th>End Date</th>
               </tr>
+              <tr class="listing-data">
+                <td>Human Grade Disinfectant Solution And Face Mask For DOST-NCR Emergency Response</td>
+                <td>For supplying the masses with disinfectants and face masks</td>
+                <td>Medical and Dental Equipment</td>
+                <td>PHP108,864</td>
+                <td>Bauertek Corporation</td>
+                <td>DPWH REGIONAL OFFICE IV-B</td>
+                <td>2020-04-08</td>
+                <td>2020-04-18</td>
+              </tr>
+              <tr class="listing-data">
+                <td>Procurement Of Relief Goods</td>
+                <td>Canned goods for those affected by the lock down</td>
+                <td>Disaster Relief Items</td>
+                <td>PHP686,000</td>
+                <td>Tina's Dried Fish And Egg Dealer</td>
+                <td>Local Government Unit Of Gamu, Isabela</td>
+                <td>2020-04-16</td>
+                <td>2020-04-23</td>
+              </tr>
+              <tr class="listing-data">
+                <td>Purchase/Acquisition Of Food Supplies For Quick Response - COVID-19</td>
+                <td>Assorted food for the families under quarantine</td>
+                <td>Food Products</td>
+                <td>PHP1,869,500</td>
+                <td>RCV Enterprise</td>
+                <td>Municipality Of Sibonga</td>
+                <td>2020-03-24</td>
+                <td>2020-04-02</td>
+              </tr>
+              <tr class="listing-data">
+                <td>Delivery OF Rice Subsidies Amidst COVID-19 Lock Down</td>
+                <td>Supplying rice to families under lock down</td>
+                <td>Agricultural Products (Seeds, Seedlings, Plants..)</td>
+                <td>PHP10,000,000</td>
+                <td>JEWEL JADE ENTERPRISES</td>
+                <td>LOCAL GOVERNMENT OF MARIA AURORA, AURORA</td>
+                <td>2020-03-24</td>
+                <td>2020-04-02</td>
+              </tr>
             </table>
           </b-card>
         </b-col>
