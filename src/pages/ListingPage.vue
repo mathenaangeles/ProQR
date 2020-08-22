@@ -26,7 +26,7 @@
           </b-row>
           <b-row class="supplier">
             <b-col>
-              <b-link @click="gotoPage('agency',agency.id)">{{ agency.name }}</b-link>
+              <b-link @click="gotoPath('agency',agency.id)">{{ agency.name }}</b-link>
             </b-col>
             <b-col class="supplier pt-2 pr-4 price">
                 No. of Interested Suppliers: {{interested ? listing.interested_suppliers + 1 : listing.interested_suppliers}}
@@ -78,7 +78,7 @@ const Listing = {
     this.agency = this.$store.state.users.filter(user => user.id == this.listing.agency)[0];
   },
   methods: {
-    gotoPage(path, id) {
+    gotoPath(path, id) {
       this.$router.push("/" + path + "/" + id);
     },
     formatPrice(number) {
