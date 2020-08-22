@@ -8,7 +8,7 @@
         <b-nav-item class="mx-2" href="/listings">Listings</b-nav-item>
       </b-navbar-nav>
       <b-navbar-nav v-if="this.$store.state.is_authenticated" class="ml-auto">
-        <b-nav-item class="mx-2" href="/agency">Profile</b-nav-item>
+        <b-nav-item class="mx-2" href="/agency/6">Profile</b-nav-item>
         <b-button
           size="sm"
           class="mx-2 my-2 my-sm-0"

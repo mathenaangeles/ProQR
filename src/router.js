@@ -5,6 +5,7 @@ import Register from "./pages/Register.vue";
 import Login from "./pages/Login.vue";
 import Listings from "./pages/Listings.vue";
 import ListingPage from "./pages/ListingPage.vue";
+import Agency from "./pages/Agency.vue";
 import Supplier from "./pages/Supplier.vue";
 import Confirmation from "./pages/Confirmation.vue";
 
@@ -38,6 +39,11 @@ export default new Router({
       name: "listing",
       component: ListingPage,
       props: true,
+    },
+    {
+      path: "/agency/:id",
+      name: "agency",
+      component: Agency,
     },
     {
       path: "/supplier/:id",

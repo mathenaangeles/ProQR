@@ -10,7 +10,7 @@ export const Users = [
     address:
       "Unit 2107 Medical Plaza Ortigas One San Miguel Ave. Brgy. San Antonio, Pasig City 1602",
     network: ["Medical Center Corporation"],
-    image_url: "user.png",
+    image_url: "user.jpg",
     rating: 4,
   },
   {
@@ -23,7 +23,7 @@ export const Users = [
     website: "https://www.medicalcentertrading.com/contact.do",
     address: "Pioneer Street Corner, Shaw Boulevard, Pasig City",
     network: ["Medical Supplier Depot", "Fompac Plastics Corporation"],
-    image_url: "user.png",
+    image_url: "user.jpg",
     rating: 3.5,
   },
   {
@@ -36,7 +36,7 @@ export const Users = [
     website: "https://philmedicalsupplies.com/",
     address: "G. Araneta Ave, Bagong Barrio West, Caloocan, Metro Manila",
     network: ["Medical Supplier Depot", "Medical Center Corporation"],
-    image_url: "user.png",
+    image_url: "user.jpg",
     rating: 2,
   },
   {
@@ -49,8 +49,8 @@ export const Users = [
     website: "http://vigorseed.com.ph/",
     address:
       "Nebraska cor. Ohio Street Southville Town and Country, Binan City, Laguna",
-    network: [""],
-    image_url: "user.png",
+    network: [],
+    image_url: "user.jpg",
     rating: 2.5,
   },
   {
@@ -63,8 +63,8 @@ export const Users = [
     website: "https://fompac.com/",
     address:
       "1140 A. Lorenzo Jr. St. former Batangas St, Tondo, Manila, 1012 Metro Manila",
-    network: [""],
-    image_url: "user.png",
+    network: [],
+    image_url: "user.jpg",
     rating: 5,
   },
   {
@@ -81,7 +81,7 @@ export const Users = [
       "Medical Center Corporation",
       "Vigorseed Incorporated",
     ],
-    image_url: "user.png",
+    image_url: "user.jpg",
     rating: null,
   },
   {
@@ -98,7 +98,7 @@ export const Users = [
       "Medical Center Corporation",
       "Philippine Medical Supplies",
     ],
-    image_url: "user.png",
+    image_url: "user.jpg",
     rating: null,
   },
 ];
