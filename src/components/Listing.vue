@@ -33,8 +33,8 @@
             {{ listing.location }}
           </b-list-group-item>
           <b-list-group-item class="pb-0">
-            <b-icon class="mr-2" icon="calendar-fill"></b-icon>
-            {{listing.start_date}} - {{listing.end_date}}
+            <b-icon class="mr-2" icon="bookshelf"></b-icon>
+            {{listing.category}}
           </b-list-group-item>
         </b-list-group>
       </b-col>

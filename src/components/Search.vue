@@ -1,7 +1,8 @@
 <template>
   <b-container fluid id="search">
     <b-row class="pt-4" align-v="center" align-h="center">
-      <h2>Find supplies at your convenience</h2>
+      <h2 v-if="type=='listing'">Find the right clients for you</h2>
+      <h2 v-else>Find supplies at your convenience</h2>
     </b-row>
     <b-row class="py-4" align-v="center" align-h="center">
       <b-col class="p-0" cols="3">
@@ -47,6 +48,7 @@ export default {
     keyword: String,
     location: String,
     category: String,
+    type: String,
   },
   data() {
     return {

@@ -1,6 +1,6 @@
 <template>
     <b-container fluid class="p-0">
-      <!-- <Search @emitSearch="emitSearch"></Search> -->
+      <Search @emitSearch="emitSearch" type="listing"></Search>
       <div id="supply-list">
         <div class="supply-info row flex-row-reverse pt-3">
           <b-pagination class="pr-4" v-model="currentPage" :total-rows="rows"></b-pagination>
@@ -24,11 +24,11 @@
 </template>
 
 <script>
-// import Search from "../components/Search.vue";
+import Search from "../components/Search.vue";
 import Listing from "../components/Listing.vue";
 export default {
   name: "Listings",
-  components: { Listing },
+  components: { Listing, Search },
   data() {
     return {
       keyword: "",

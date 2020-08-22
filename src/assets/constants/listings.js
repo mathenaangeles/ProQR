@@ -10,6 +10,7 @@ export const Listings = [
     location: "Carmen, Cotobato",
     agency: 6,
     interested_suppliers: 20,
+    category: "Agricultural Products (Seeds, Seedlings, Plants..)",
   },
   {
     id: 2,
@@ -23,6 +24,7 @@ export const Listings = [
     location: "Davao del Norte",
     agency: 7,
     interested_suppliers: 45,
+    category: "Medical and Dental Equipment",
   },
   {
     id: 3,
@@ -35,5 +37,6 @@ export const Listings = [
     location: "Davao del Norte",
     agency: 7,
     interested_suppliers: 3,
+    category: "Drugs and Medicines",
   },
 ];

@@ -2,7 +2,7 @@
   <div class="home">
     <b-container fluid class="p-0">
       <Map></Map>
-      <Search @emitSearch="emitSearch"></Search>
+      <Search @emitSearch="emitSearch" type="home"></Search>
       <div id="supply-list">
         <div class="supply-info row flex-row-reverse pt-3">
           <b-pagination class="pr-4" v-model="currentPage" :total-rows="rows"></b-pagination>
