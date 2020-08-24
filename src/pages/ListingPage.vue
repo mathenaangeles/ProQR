@@ -58,7 +58,7 @@
     <b-card>
       <b-row>
         <b-col>
-          <b-img :src="require(`../assets/images/graph.jpg`)" fluid></b-img>
+          <b-img :src="require(`../assets/images/demand_growth.png`)" fluid></b-img>
         </b-col>
         <b-col>
           <b class="statistics-head">PRIME PREMIUM</b>
@@ -71,6 +71,16 @@
           <hr />
         </b-col>
       </b-row>
+      <br>
+      <b-row>
+        <b-col>
+          <b-img :src="require(`../assets/images/item_stock.png`)" fluid></b-img>
+        </b-col>
+        <b-col>
+          <b-img :src="require(`../assets/images/contract_percentage.png`)" fluid></b-img>
+        </b-col>
+      </b-row>
+      
     </b-card>
   </b-container>
 </template>

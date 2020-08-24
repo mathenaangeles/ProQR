@@ -1,4 +1,6 @@
 <template>
+  <div id="login">
+    <div>jsoidjaoisjd</div>
   <b-container fluid id="login" class="d-flex justify-content-center">
     <b-card class="mt-5" no-body>
       <b-card-body title="Login">
@@ -35,6 +37,7 @@
       </b-card-body>
     </b-card>
   </b-container>
+  </div>
 </template>
 
 <script>
@@ -55,7 +58,7 @@ export default {
 </script>
 <style scoped>
 #login {
-  background-color: #b1a296 !important;
+  background-color: #f0eae5 !important;
   min-height: 100vh;
 }
 .card {
