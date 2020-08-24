@@ -7,8 +7,7 @@ export const Users = [
     email: "info@medicalsuppliesdepot.com.ph",
     mobile: "+63966 923 7596",
     website: "http://medicalsuppliesdepot.com.ph/about-us/",
-    address:
-      "Unit 2107 Medical Plaza Ortigas One San Miguel Ave. Brgy. San Antonio, Pasig City 1602",
+    address: "Unit 2107 Medical Plaza Ortigas One, Pasig City 1602",
     network: ["Medical Center Corporation"],
     image_url: "user.jpg",
     rating: 4,

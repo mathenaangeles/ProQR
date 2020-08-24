@@ -3,33 +3,42 @@
     <b-container fluid class="p-0">
       <b-row>
         <b-col cols="7" class="basic-info m-4">
-          <img :src="require(`../assets/images/` + agency.image_url)" class="profile-picture rounded-0"/>
-          <table>
-            <tr>
-              <td>Name:</td>
-              <td>{{agency.name}}</td>
-            </tr>
-            <tr>
-              <td>Contact Person:</td>
-              <td>{{agency.contact_person}}</td>
-            </tr>
-            <tr>
-              <td>Email:</td>
-              <td>{{agency.email}}</td>
-            </tr>
-            <tr>
-              <td>Mobile:</td>
-              <td>{{agency.mobile}}</td>
-            </tr>
-            <tr>
-              <td>Website:</td>
-              <td><a :href="agency.website">{{agency.website}}</a></td>
-            </tr>
-            <tr>
-              <td>Address:</td>
-              <td>{{agency.address}}</td>
-            </tr>
-          </table>
+          <b-row class="basic-information-row">
+            <img
+              :src="require(`../assets/images/` + agency.image_url)"
+              class="profile-picture rounded-0 mx-5"
+            />
+            <b-card>
+              <table>
+                <tr>
+                  <td>Name:</td>
+                  <td>{{agency.name}}</td>
+                </tr>
+                <tr>
+                  <td>Contact Person:</td>
+                  <td>{{agency.contact_person}}</td>
+                </tr>
+                <tr>
+                  <td>Email:</td>
+                  <td>{{agency.email}}</td>
+                </tr>
+                <tr>
+                  <td>Mobile:</td>
+                  <td>{{agency.mobile}}</td>
+                </tr>
+                <tr>
+                  <td>Website:</td>
+                  <td>
+                    <a :href="agency.website">{{agency.website}}</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Address:</td>
+                  <td>{{agency.address}}</td>
+                </tr>
+              </table>
+            </b-card>
+          </b-row>
         </b-col>
         <b-col cols="4" class="m-4">
           <b-card header-tag="header" class="h-100 overflow-auto network">
@@ -63,7 +72,7 @@
                 <th>Start Date</th>
                 <th>End Date</th>
               </tr>
-              <tr class="listing-data">
+              <tr class="listing-data odd">
                 <td>Human Grade Disinfectant Solution And Face Mask For DOST-NCR Emergency Response</td>
                 <td>For supplying the masses with disinfectants and face masks</td>
                 <td>Medical and Dental Equipment</td>
@@ -83,7 +92,7 @@
                 <td>2020-04-16</td>
                 <td>2020-04-23</td>
               </tr>
-              <tr class="listing-data">
+              <tr class="listing-data odd">
                 <td>Purchase/Acquisition Of Food Supplies For Quick Response - COVID-19</td>
                 <td>Assorted food for the families under quarantine</td>
                 <td>Food Products</td>
@@ -124,7 +133,7 @@
                 <th>Start Date</th>
                 <th>End Date</th>
               </tr>
-              <tr class="listing-data">
+              <tr class="listing-data odd">
                 <th>P01</th>
                 <td>Countermeasures to COVID-19 Crisis</td>
                 <td>Agency-to-agency</td>
@@ -144,7 +153,7 @@
                 <td>2020-08-24</td>
                 <td>2020-08-28</td>
               </tr>
-              <tr class="listing-data">
+              <tr class="listing-data odd">
                 <th>P03</th>
                 <td>Learning Materials & Equipment for Students</td>
                 <td>Agency-to-agency</td>
@@ -160,19 +169,18 @@
       </b-row>
       <b-row>
         <b-col class="listings">
-          <h1>Listings</h1>
-          <div class="flex-row flex-wrap align-content-around justify-content-center">
-              <Listing
-                v-for="listing in listings"
-                :key="listing.id"
-                :listing="listing"
-                :agency="getAgency(listing.agency)"
-              />
+          <!-- <h1>Listings</h1> -->
+          <div class="row flex-row flex-wrap align-content-around justify-content-center">
+            <Listing
+              v-for="listing in listings"
+              :key="listing.id"
+              :listing="listing"
+              :agency="getAgency(listing.agency)"
+            />
           </div>
           <a href="/newlisting" class="btn btn-primary">Add Listing</a>
         </b-col>
       </b-row>
-      
     </b-container>
   </div>
 </template>
@@ -187,9 +195,7 @@ export default {
   },
   methods: {
     gotoUser(name) {
-      var user = this.$store.state.users.filter(
-        (user) => user.name == name
-      )[0];
+      var user = this.$store.state.users.filter((user) => user.name == name)[0];
       this.$router.push("/" + user.type + "/" + user.id);
     },
     getAgency(agency_id) {
@@ -212,55 +218,62 @@ export default {
       );
       return listings;
     },
-  }
+  },
 };
 </script>
 <style scoped>
-  .profile-picture {
-    width: 150px;
-    height: 150px;
-    margin-bottom: 20px;
-  }
+.agency {
+  background-color: #c9b9ab;
+}
+.profile-picture {
+  width: 200px;
+  height: 200px;
+  border: 5px solid #ffffff;
+}
 
-  .basic-info table td:first-child {
-    width: 150px;
-    color: #557a95;
-    font-weight: bold;
-  }
+.basic-info table td:first-child {
+  width: 150px;
+  color: #557a95;
+  font-weight: bold;
+}
 
-  .card-header {
-    background-color: #557a95 !important;
-    color: #FFF;
-    font-weight: bold;
-  }
+.card-header {
+  background-color: #557a95 !important;
+  color: #fff;
+  font-weight: bold;
+}
 
-  .transaction-history .card-body,
-  .procurement-plan .card-body {
-    padding: 0px;
-  }
+.transaction-history .card-body,
+.procurement-plan .card-body {
+  padding: 0px;
+}
 
-  .transaction-history table tr th,
-  .procurement-plan table tr th {
-    color: #557a95;
-    font-weight: bold;
-    font-size: 12px;
-  }
+.transaction-history table tr th,
+.procurement-plan table tr th {
+  color: #557a95;
+  font-weight: bold;
+  font-size: 12px;
+}
 
-  .listing-data td {
-    font-size: 11px;
-  }
+.listing-data td {
+  font-size: 11px;
+}
 
-  .listings {
-    margin: 25px auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
+.listings {
+  margin: 25px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
-  .listings h1 {
-    font-size: 25px;
-    font-weight: bold;
-    color: #557a95;
-  }
+.listings h1 {
+  font-size: 30px;
+  font-weight: bold;
+  color: #557a95;
+  border-bottom: 5px solid #557a95;
+}
+.odd {
+  background-color: #c3d5e0;
+}
 </style>
