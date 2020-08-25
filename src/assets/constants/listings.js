@@ -25,6 +25,7 @@ export const Listings = [
     agency: 7,
     interested_suppliers: 45,
     category: "Medical and Dental Equipment",
+    recommended: true,
   },
   {
     id: 3,
@@ -51,5 +52,6 @@ export const Listings = [
     agency: 6,
     interested_suppliers: 2,
     category: "Medical and Dental Equipment",
+    recommended: true,
   },
 ];

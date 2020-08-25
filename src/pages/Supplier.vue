@@ -3,54 +3,49 @@
     <b-container fluid class="p-0">
       <b-row>
         <b-col cols="7" class="basic-info m-4">
-          <b-row>
-            <img
-              :src="require(`../assets/images/` + supplier.image_url)"
-              class="profile-picture rounded-0 mr-4"
-            />
-            <table class="details">
-              <tr class>
-                <td>Name:</td>
-                <td>{{supplier.name}}</td>
-              </tr>
-              <tr>
-                <td>Contact Person:</td>
-                <td>{{supplier.contact_person}}</td>
-              </tr>
-              <tr>
-                <td>Email:</td>
-                <td>{{supplier.email}}</td>
-              </tr>
-              <tr>
-                <td>Mobile:</td>
-                <td>{{supplier.mobile}}</td>
-              </tr>
-              <tr>
-                <td>Website:</td>
-                <td>
-                  <a :href="supplier.website">{{supplier.website}}</a>
-                </td>
-              </tr>
-              <tr>
-                <td>Address:</td>
-                <td>{{supplier.address}}</td>
-              </tr>
-              <tr>
-                <td>Rating:</td>
-                <td>
-                  <b-form-rating
-                    variant="warning"
-                    v-model="supplier.rating"
-                    readonly
-                    show-value
-                    show-value-max
-                    inline
-                    no-border
-                  ></b-form-rating>
-                </td>
-              </tr>
-            </table>
-          </b-row>
+          <img :src="require(`../assets/images/` + supplier.image_url)" class="profile-picture rounded-0"/>
+          <table class="details">
+            <tr>
+              <td>Name:</td>
+              <td>{{supplier.name}}</td>
+            </tr>
+            <tr>
+              <td>Contact Person:</td>
+              <td>{{supplier.contact_person}}</td>
+            </tr>
+            <tr>
+              <td>Email:</td>
+              <td>{{supplier.email}}</td>
+            </tr>
+            <tr>
+              <td>Mobile:</td>
+              <td>{{supplier.mobile}}</td>
+            </tr>
+            <tr>
+              <td>Website:</td>
+              <td><a :href="supplier.website">{{supplier.website}}</a></td>
+            </tr>
+            <tr>
+              <td>Address:</td>
+              <td>{{supplier.address}}</td>
+            </tr>
+            <tr>
+              <td>Timeliness:</td>
+              <td><b-form-rating variant="warning" v-model="supplier.timeliness" readonly show-value show-value-max inline no-border precision="1"></b-form-rating></td>
+            </tr>
+            <tr>
+              <td>Consistency:</td>
+              <td><b-form-rating variant="warning" v-model="supplier.consistency" readonly show-value show-value-max inline no-border precision="1"></b-form-rating></td>
+            </tr>
+            <tr>
+              <td>Completeness:</td>
+              <td><b-form-rating variant="warning" v-model="supplier.completeness" readonly show-value show-value-max inline no-border precision="1"></b-form-rating></td>
+            </tr>
+            <tr>
+              <td><h4><b>Score:</b></h4></td>
+              <td><b-form-rating variant="warning" v-model="supplier.rating" readonly show-value show-value-max inline no-border precision="1"></b-form-rating></td>
+            </tr>
+          </table>
         </b-col>
         <b-col cols="4" class="m-4">
           <b-card header-tag="header" class="h-100 overflow-auto network">
@@ -216,6 +211,7 @@ export default {
 .supplier {
   background-color: #c9b9ab;
 }
+
 .profile-picture {
   width: 180px;
   height: 180px;

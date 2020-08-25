@@ -1,11 +1,14 @@
 <template>
   <b-card no-body class="overflow-hidden m-3 p-0">
     <b-row no-gutters>
-      <b-col md="4">
+      <b-col md="4" style='background-color: #EDEDED'>
+        <div v-if="listing.recommended" class="d-inline-flex pl-2 pr-2" style='background-color: white'>
+          <b-icon icon="star-fill" variant="warning"></b-icon><span style="color: white">.</span> &nbsp;&nbsp; Recommended
+        </div>
         <b-card-img :src="require(`../assets/images/default.jpg`)" class="rounded-0"></b-card-img>
       </b-col>
       <b-col md="8">
-        <b-card-body class="pb-0">
+        <b-card-body class="pb-0 pt-2">
           <b-row>
             <b-col>
               <b

@@ -11,6 +11,9 @@ export const Users = [
     network: ["Medical Center Corporation"],
     image_url: "user.jpg",
     rating: 4,
+    timeliness: 3.4,
+    consistency: 4.8,
+    completeness: 4.4,
   },
   {
     id: 2,
@@ -24,6 +27,9 @@ export const Users = [
     network: ["Medical Supplier Depot", "Fompac Plastics Corporation"],
     image_url: "user.jpg",
     rating: 3.5,
+    timeliness: 4.6,
+    consistency: 4.2,
+    completeness: 3.5,
   },
   {
     id: 3,
@@ -36,7 +42,10 @@ export const Users = [
     address: "G. Araneta Ave, Bagong Barrio West, Caloocan, Metro Manila",
     network: ["Medical Supplier Depot", "Medical Center Corporation"],
     image_url: "user.jpg",
-    rating: 2,
+    rating: 5,
+    timeliness: 4.9,
+    consistency: 5,
+    completeness: 5,
   },
   {
     id: 4,
@@ -51,6 +60,9 @@ export const Users = [
     network: [],
     image_url: "user.jpg",
     rating: 2.5,
+    timeliness: 2.4,
+    consistency: 2.8,
+    completeness: 1.4,
   },
   {
     id: 5,
@@ -65,6 +77,9 @@ export const Users = [
     network: [],
     image_url: "user.jpg",
     rating: 5,
+    timeliness: 5,
+    consistency: 4.8,
+    completeness: 4.4,
   },
   {
     id: 6,
