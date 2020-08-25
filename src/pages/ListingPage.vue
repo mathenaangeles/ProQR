@@ -65,7 +65,13 @@
     <b-card class="mb-5">
       <b-row>
         <b-col>
-          <b-img class="pic" :src="require(`../assets/images/demand_growth.png`)" fluid></b-img>
+          <b-img class="pic" :src="require(`../assets/images/demand.png`)" fluid></b-img>
+        </b-col>
+        <b-col>
+          <b-img class="pic" :src="require(`../assets/images/stock.png`)" fluid></b-img>
+        </b-col>
+        <b-col>
+          <b-img class="pic" :src="require(`../assets/images/contract1.png`)" fluid></b-img>
         </b-col>
         <b-col>
           <b class="statistics-head">PRIME PREMIUM</b>
