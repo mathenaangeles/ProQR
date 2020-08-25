@@ -3,42 +3,37 @@
     <b-container fluid class="p-0">
       <b-row>
         <b-col cols="7" class="basic-info m-4">
-          <b-row align-v="center">
-            <img
-              :src="require(`../assets/images/` + supplier.image_url)"
-              class="profile-picture rounded-0 mx-5"
-            />
-            <b-card>
-              <table>
-                <tr>
-                  <td>Name:</td>
-                  <td>{{supplier.name}}</td>
-                </tr>
-                <tr>
-                  <td>Contact Person:</td>
-                  <td>{{supplier.contact_person}}</td>
-                </tr>
-                <tr>
-                  <td>Email:</td>
-                  <td>{{supplier.email}}</td>
-                </tr>
-                <tr>
-                  <td>Mobile:</td>
-                  <td>{{supplier.mobile}}</td>
-                </tr>
-                <tr>
-                  <td>Website:</td>
-                  <td>
-                    <a :href="supplier.website">{{supplier.website}}</a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Address:</td>
-                  <td>{{supplier.address}}</td>
-                </tr>
-              </table>
-            </b-card>
-          </b-row>
+          <img :src="require(`../assets/images/` + supplier.image_url)" class="profile-picture rounded-0"/>
+          <table class="details">
+            <tr>
+              <td>Name:</td>
+              <td>{{supplier.name}}</td>
+            </tr>
+            <tr>
+              <td>Contact Person:</td>
+              <td>{{supplier.contact_person}}</td>
+            </tr>
+            <tr>
+              <td>Email:</td>
+              <td>{{supplier.email}}</td>
+            </tr>
+            <tr>
+              <td>Mobile:</td>
+              <td>{{supplier.mobile}}</td>
+            </tr>
+            <tr>
+              <td>Website:</td>
+              <td><a :href="supplier.website">{{supplier.website}}</a></td>
+            </tr>
+            <tr>
+              <td>Address:</td>
+              <td>{{supplier.address}}</td>
+            </tr>
+            <tr>
+              <td>Rating:</td>
+              <td><b-form-rating variant="warning" v-model="supplier.rating" readonly show-value show-value-max inline no-border></b-form-rating></td>
+            </tr>
+          </table>
         </b-col>
         <b-col cols="4" class="m-4">
           <b-card header-tag="header" class="h-100 overflow-auto network">
@@ -210,6 +205,11 @@ export default {
   border: 5px solid #ffffff;
 }
 
+.basic-info {
+  background-color: white;
+  border-radius: 10px;
+  border: 6px ridge #557a95;
+}
 .basic-info table td:first-child {
   width: 150px;
   color: #557a95;
